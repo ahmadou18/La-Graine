@@ -1,0 +1,50 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, header, section, footer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+#up {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
+header {
+  flex-direction: column;
+  background: lightblue;
+}
+
+header ul {
+  display: flex;
+}
+
+#apropos {
+  background: yellow;
+}
+
+#galerie {
+  background: red;
+}
+
+#crowdfunding {
+  background: grey;
+}
+
+#contact {
+  background: blue;
+}
+
+footer {
+  background: purple;
+}
