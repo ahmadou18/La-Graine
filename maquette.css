@@ -21,7 +21,13 @@ html, header, section, footer {
 }
 
 body {
+  height: 100%;
   width: 100%;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-family: 'Nickainley';
 }
 
 #up {
@@ -43,69 +49,195 @@ header {
 }
 
 header ul {
-  box-sizing: padding-box;
   position: fixed;
-  top: 0;
+  z-index: 1;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #BEF574;
+  background-color: #80D0D0;
   color: #9B1700;
   list-style: none;
 }
 
-header li, a {
+header li {
+  position: relative;
+  width: 100%;
   padding: 10px;
-  font-family: 'Toralfont';
+  font-family: Helvetica;
   color: #9B1700;
+  text-decoration: none;
+  text-align: center;
+}
+
+header li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 100%;
+  border-top: 5px solid #9B1700;
+  transition: 1s;
+}
+
+ul a {
   text-decoration: none;
 }
 
-header li:nth-of-type(2) {
-  margin-left: auto;
-}
-
 header h1 {
+  z-index: 1;
   font-size: 125px;
   font-family: 'Nickainley';
-  color: #9B1700;
+  color: white;
   cursor: default;
+
 }
 
 header h3 {
+  z-index: 0;
   font-family: 'Toralfont';
   font-size: 50px;
 }
 
 section {
-  padding-top: 40px;
-}
-
-section {
   justify-content: center;
   align-items: center;
-  
+  position: relative;
 }
 
 #apropos {
+  z-index: 2;
+  background: url('galerie/image4.jpg') center fixed;
+}
+#apropos article {
+  display: flex;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+}
 
+#apropos h1 {
+  position: absolute;
+  color: white;
+  top: 50px;
+  right: 50px;
+  font-size: 100px;
+}
+
+#apropos p {
+  margin-left: 50%;
+  margin-right: 50px;
+  color: white;
+  font-family: Helvetica;
 }
 
 #galerie {
+  background: black;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
+#galerie img {
+  width: 25%;
+  height: 50%;
+  opacity: 0.75;
+  object-fit: cover;
+}
+
+#galerie img:hover {
+  opacity: 1;
+  transition-duration: 0.3s;
 }
 
 #crowdfunding {
-  background: grey;
+  justify-content: flex-start;
+  width: 100%;
+  background: url("galerie/image3.jpg") center fixed;
+}
+
+#crowdfunding article {
+  position: relative;
+  background-color: #80D0D0;
+  width: 50%;
+  height: 100%;
+  left: 0;
+}
+
+#crowdfunding h1 {
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  left: 25px;
+  font-size: 90px;
+}
+
+#crowdfunding p {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 200px;
+  color: white;
+  font-family: Helvetica;
+  text-align: justify;
 }
 
 #contact {
-  background: blue;
+  background: url("galerie/image1.jpg") center fixed;
+  justify-content: space-around;
 }
 
 footer {
-  background: purple;
+  position: relative;
+  z-index: 3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('galerie/home.jpg') center fixed;
+}
+
+footer ul {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  list-style: none;
+}
+
+footer li {
+  position: relative;
+  width: 100%;
+  margin-right: 100px;
+  font-family: Helvetica;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+footer li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  border-top: 5px solid #9B1700;
+  transition-duration: 0.3s;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+footer h1 {
+  z-index: 1;
+  font-size: 125px;
+  font-family: 'Nickainley';
+  color: white;
+  cursor: default;
+
 }

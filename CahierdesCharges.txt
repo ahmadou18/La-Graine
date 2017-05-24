@@ -1,0 +1,24 @@
+La Graine Sans Gluten, site vitrine - Cahier des Charges
+
+LOT1: Page d'Accueil
+-> Titre du projet et tagline
+-> Interaction avec les différentes pages
+-> Mise en avant réseaux sociaux
+
+LOT2: Pourquoi La Graine?
+-> Explication de la maladie coeliaque
+
+LOT3: Mise en avant imagée des plats
+-> Galerie animée
+-> Outil d'expansion de la galerie
+
+LOT4: Présentation du projet
+-> Qu'est-ce que La Graine Sans Gluten?
+
+LOT5: Mise en avant projet crowdfunding
+-> Renvoi vers la page de crowdfunding via widget intégré au site
+-> Texte d'explication du crowdfunding et ses modalités (récompenses etc)
+
+LOT6: Outil de contact
+-> Formulaire mail
+-> Widgets Réseaux Sociaux

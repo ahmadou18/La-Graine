@@ -6,45 +6,104 @@
   <link rel="stylesheet" type="text/css" href="maquette.css">
 </head>
 <body>
+
   <a href=""><button id="up">^</button></a>
+
   <header id="accueil">
     <ul id="navbar">
-      <a href="#accueil"><li>Accueil</li></a>
+      <a href=""><li>Accueil</li></a>
       <a href="#apropos"><li>À Propos</li></a>
       <a href="#galerie"><li>Galerie</li></a>
       <a href="#crowdfunding"><li>Crowdfunding</li></a>
       <a href="#contact"><li>Contact</li></a>
     </ul>
 
-    <h1>La Graine Sans Gluten</h1>
-    <h3>tagline</h3>
+    <h1 id="logo">La Graine Sans Gluten</h1>
+    <h3>La Graine Sous Toutes Ses Formes</h3>
   </header>
+
   <section id="apropos">
-    <img src="" alt="ptite image">
     <article>
-      <h1>Coucou</h1>
-      <p>Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos ex isdem foveis cerneret emergentes, quae clam palamve agitabantur, occultis Constantium litteris edocebat inplorans subsidia, quorum metu tumor notissimus Caesaris exhalaret.</p>
+      <h1>Il était une fois... le grain.</h1>
+      <p>
+        Ce grain s'appelle blé, orge, seigle, épeautre, kamut ou avoine.
+        Ces grains sont proscrits pour les personnes qui sont atteints de la maladie du cœliaque (intolérance au gluten) ou sensibles. Le gluten est un composé d'amidon et de protéines qui se trouve dans certains grains, comme les différentes espèces de blé.
+        <br>
+        Environ 1 % de la population serait affectée par la maladie cœliaque.
+        <br>
+        La maladie cœliaque (intolérance au gluten)
+        <br>
+        La maladie cœliaque est une maladie auto-immune dans laquelle le système immunitaire attaque la muqueuse de l'intestin grêle après l'ingestion de gluten, chez une personne génétiquement sensible.
+        <br>
+        La sensibilité au gluten non cœliaque (SGNC)
+        <br>
+        Dans la sensibilité au gluten non cœliaque (SGNC), des personnes qui ne présentent pas les marqueurs sanguins, tissulaires, et génétiques de la maladie cœliaque ont des symptômes qui apparaissent peu de temps après l’ingestion de gluten et qui disparaissent suite au retrait du gluten de l’alimentation.
+      </p>
     </article>
   </section>
   <section id="galerie">
-    <img src="" alt="ptite image1">
-    <img src="" alt="ptite image2">
-    <img src="" alt="ptite image3">
-    <img src="" alt="ptite image4">
-    <img src="" alt="ptite image5">
-    <img src="" alt="ptite image6">
+    <img src="galerie/image1.jpg" alt="ptite image1">
+    <img src="galerie/image2.jpg" alt="ptite image2">
+    <img src="galerie/image3.jpg" alt="ptite image3">
+    <img src="galerie/image4.jpg" alt="ptite image4">
+    <img src="galerie/image3.jpg" alt="ptite image5">
+    <img src="galerie/image1.jpg" alt="ptite image6">
+    <img src="galerie/image4.jpg" alt="ptite image7">
+    <img src="galerie/image2.jpg" alt="ptite image8">
+  </section>
+  <section id="apropos">
+    <article>
+      <h1>À Propos</h1>
+      <p>
+        La Graine Sans Gluten est un concept d'une cuisine qui permet aux personnes intolérantes et sensibles au gluten de se faire plaisir sans frustration !
+        <br>
+        Les plats sont réalisés sur place avec des produits frais, locaux et faits maison. C'est une cuisine pleine de saveurs qui vous fera voyager à travers les pays de l’Afrique du Nord, en passant par l’Afrique de l'Ouest avant de revenir en France .
+        <br>
+        Aucun ingrédient à base de gluten est utilisé, une proscription totale!
+      </p>
+    </article>
   </section>
   <section id="crowdfunding">
     <article>
-      <h1>Coucou</h1>
+      <h1>Soutenir le projet</h1>
       <p>Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos ex isdem foveis cerneret emergentes, quae clam palamve agitabantur, occultis Constantium litteris edocebat inplorans subsidia, quorum metu tumor notissimus Caesaris exhalaret.</p>
     </article>
-    <img src="" alt="ptite image">
   </section>
   <section id="contact">
-    <form>formulaire</form>
-    <facebook>facebook</facebook>
+    <form action="mailto:"><h1>Contact</h1>
+    <fieldset>
+      <input type="radio" name="gender" value="male" checked>M.
+      <input type="radio" name="gender" value="female"> Mme
+      <input type="radio" name="gender" value="other"> Autre
+    </fieldset>
+    <fieldset>
+      <input type="text" name="name" placeholder="nom"><br>
+      <input type="text" name="firstname" placeholder="prénom"><br>
+      <input type="mail" name="mail" placeholder="mail">
+    </fieldset>
+    <fieldset>
+      <textarea name="message">
+      </textarea>
+    </fieldset>
+    Je souhaite recevoir des informations : <br>
+    <input type="checkbox" name="vehicle1" value="Bike"> Sur le projet<br>
+    <input type="checkbox" name="vehicle2" value="Car">
+    Sur les ateliers <br>
+    <input type="submit" value="envoyer">
+    </form>
+    
   </section>
-  <footer>footer</footer>
+  <footer>
+    <h1 id="logo">La Graine Sans Gluten</h1>
+
+    <ul id="navbar">
+      <a href=""><li>Accueil</li></a>
+      <a href="#apropos"><li>À Propos</li></a>
+      <a href="#galerie"><li>Galerie</li></a>
+      <a href="#crowdfunding"><li>Crowdfunding</li></a>
+      <a href="#contact"><li>Contact</li></a>
+    </ul>
+
+  </footer>
 </body>
 </html>
