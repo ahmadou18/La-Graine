@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, header, section{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
+#up {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../gallery/index.jpg);
+  background-size: cover;
+}
+
+header .menu {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu li a{
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: 'roboto',sans-serif;
+}
+
+.container h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  color: white;
+}
+
+.container img{
+  width: 130px;
+  height: 130px;
+}
+
+.container{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about {
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left{
+  width: 30%;
+  height: 200px;
+  text-align:left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left p{
+  font-family: 'roboto',sans-serif;
+  font-size: 14px;
+  color: gray;
+}
+
+.left h1{
+  color: #B9121B;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 50px;
+}
+.right{
+  background-image: url(../gallery/img1.jpg);
+  width: 40%;
+  height: 350px;
+  background-size: cover;
+}
+
+
+
+#gallery {
+
+}
+
+.gallery1{
+  height: 50vh;
+  background-image: url(../gallery/gallerie.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery1 h1{
+  font-size: 70px;
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.food{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.miam{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.miam p{
+  padding: 5px;
+  color: gray;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'roboto',sans-serif;
+  text-align: left;
+
+}
+
+.miam h1{
+  color: #B9121B;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+
+}
+
+.contain{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.photo{
+  background-image: url(../gallery/brooke.jpg);
+  width: 250px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+#crowdfunding {
+  background: grey;
+}
+
+#contact {
+  background: blue;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background: purple;
+}
