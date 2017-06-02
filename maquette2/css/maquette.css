@@ -1,183 +1,295 @@
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-html, body, header, section{
-  height: 100%;
+html, body,section{
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
 }
 
 
 
 
-#up {
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
+/*#up {
+position: fixed;
+right: 2%;
+bottom: 2%;
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  background-image: url(../gallery/index.jpg);
-  background-size: cover;
+display: flex;
+flex-direction: column;
+background-image: url(../gallery/index.jpg);
+background-size: cover;
 }
 
 header .menu {
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+position: fixed;
+
+display: flex;
+
+width: 100%;
+height: 50px;
+margin: 0;
+padding: 0;
+
+justify-content: center;
+align-items: center;
 }
 
 
 .menu li {
-  list-style-type: none;
+list-style-type: none;
 }
 
 .menu li a{
-  margin: 0 10px 0 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-  font-family: 'roboto',sans-serif;
+margin: 0 10px 0 10px;
+
+text-decoration: none;
+
+color: black;
+
+font-family: 'roboto',sans-serif;
+font-size: 12px;
+font-weight: bold;
 }
 
 .container h1{
-  font-family: 'Dancing Script', cursive;
-  font-size: 60px;
-  color: white;
+color: white;
+
+font-family: 'Dancing Script', cursive;
+font-size: 60px;
+}
+
+.container h3{
+color: white;
+
+font-family: 'Dancing Script', cursive;
+font-size: 30px;
 }
 
 .container img{
-  width: 130px;
-  height: 130px;
+width: 130px;
+height: 130px;
 }
 
 .container{
-  height: 500px;
+display: flex;
+flex-direction: column;
+height: 500px;
+justify-content: space-around;
+align-items: center;
+}*/
+
+/*HISTOIRE*/
+
+#history{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hdetail{
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+
 }
 
-#about {
-  height: 400px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
-.left{
-  width: 30%;
-  height: 200px;
-  text-align:left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.left p{
-  font-family: 'roboto',sans-serif;
-  font-size: 14px;
-  color: gray;
-}
-
-.left h1{
-  color: #B9121B;
+.hdetail h1{
+  color: #BF272F;
   font-family: 'Dancing Script', cursive;
-  text-align: center;
-  font-size: 50px;
+  font-size: 40px;
+  text-transform: capitalize;
 }
-.right{
-  background-image: url(../gallery/img1.jpg);
-  width: 40%;
-  height: 350px;
+
+.hdetail p{
+  font-family: 'roboto',sans-serif;
+  font-size: 16px;
+  width: 90%;
+}
+
+.himage{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-image: url(../gallery/image3.jpg);
   background-size: cover;
 }
 
 
 
-#gallery {
+/*A PROPOS*/
+
+section #about{
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+
+.left{
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  height: 100vh;
+
+  text-align:left;
+
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slideInDown{
+  opacity: 1;
+  animation-duration: 1s;
+}
+
+
+.ajust{
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+  height: 400px;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ajust p{
+  color: gray;
+
+  font-family: 'roboto',sans-serif;
+  font-size: 17px;
+
+  line-height: 30px;
+}
+
+.ajust h1{
+  text-align: center;
+
+  color: #B9121B;
+
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+}
+.right{
+  width: 50%;
+  height: 100vh;
+  background-image: url(../gallery/img1.jpg);
+  background-size: cover;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.fadeInRight{
+  opacity: 1;
+  animation-duration: 1s;
+}
+
+/*#gallery {
 
 }
 
 .gallery1{
-  height: 50vh;
-  background-image: url(../gallery/gallerie.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+
+height: 50vh;
+
+background-image: url(../gallery/gallerie.jpg);
+background-size: cover;
+
+justify-content: center;
+align-items: center;
 }
 
 .gallery1 h1{
-  font-size: 70px;
-  font-family: 'Dancing Script', cursive;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+color: white;
+text-shadow: 1px 1px 1px black;
+
+font-family: 'Dancing Script', cursive;
+font-size: 70px;
 }
 
 .food{
-  width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+display: flex;
+
+width: 100%;
+height: 500px;
+
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
 }
 
 .miam{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 500px;
+display: flex;
+
+width: 100%;
+height: 500px;
+
+justify-content: center;
+align-items: center;
 }
 
 .miam p{
-  padding: 5px;
-  color: gray;
-  text-align: center;
-  font-size: 14px;
-  font-family: 'roboto',sans-serif;
-  text-align: left;
+padding: 5px;
+
+text-align: center;
+text-align: left;
+
+color: gray;
+
+font-family: 'roboto',sans-serif;
+font-size: 14px;
 
 }
 
 .miam h1{
-  color: #B9121B;
-  font-size: 40px;
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
+text-align: center;
+
+color: #B9121B;
+
+font-family: 'Dancing Script', cursive;
+font-size: 40px;
 
 }
 
 .contain{
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+display: flex;
+
+width: 100%;
+height: 200px;
+
+justify-content: space-around;
+align-items: center;
 }
 
 .photo{
-  background-image: url(../gallery/brooke.jpg);
-  width: 250px;
-  height: 180px;
-  background-size: cover;
-  background-position: center;
-}
+width: 250px;
+height: 180px;
+
+background-image: url(../gallery/brooke.jpg);
+background-position: center;
+background-size: cover;
+}*/
 
 
 
@@ -194,5 +306,25 @@ header .menu {
 footer {
   width: 100%;
   height: 100px;
+
   background: purple;
+}
+
+
+.box{
+  width: 103px;
+  height: 53px;
+  background-color: green;
+  border: 3px solid red;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.box p{
+  text-align: center;
 }
