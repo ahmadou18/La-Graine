@@ -2,27 +2,36 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>La Graine Sans Gluten - $pointdepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Graine Sans Gluten</title>
   <link rel="stylesheet" type="text/css" href="maquette.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://use.fontawesome.com/acd6178220.js"></script>
 </head>
 <body>
 
-  <a href=""><button id="up">^</button></a>
+  <nav>
+    <ul id="navbar">
+      <li onclick="scrollto('accueil')">Accueil</li>
+      <li onclick="scrollto('histoire')">Le Grain</li>
+      <li onclick="scrollto('galerie')">Les Plats</li>
+      <li onclick="scrollto('apropos')">Le Projet</li>
+      <li onclick="scrollto('crowdfunding')">Nous Soutenir</li>
+      <li onclick="scrollto('contact')">Contact</li>
+    </ul>
+    <div>
+      <i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </div>
+  </nav>
 
   <header id="accueil">
-    <ul id="navbar">
-      <a href=""><li>Accueil</li></a>
-      <a href="#apropos"><li>À Propos</li></a>
-      <a href="#galerie"><li>Galerie</li></a>
-      <a href="#crowdfunding"><li>Crowdfunding</li></a>
-      <a href="#contact"><li>Contact</li></a>
-    </ul>
-
+    <img src="galerie/logoplaceholder.png">
     <h1 id="logo">La Graine Sans Gluten</h1>
     <h3>La Graine Sous Toutes Ses Formes</h3>
   </header>
 
-  <section id="apropos">
+  <section id="histoire">
     <article>
       <h1>Il était une fois... le grain.</h1>
       <p>
@@ -42,14 +51,21 @@
     </article>
   </section>
   <section id="galerie">
-    <img src="galerie/image1.jpg" alt="ptite image1">
-    <img src="galerie/image2.jpg" alt="ptite image2">
-    <img src="galerie/image3.jpg" alt="ptite image3">
-    <img src="galerie/image4.jpg" alt="ptite image4">
-    <img src="galerie/image3.jpg" alt="ptite image5">
-    <img src="galerie/image1.jpg" alt="ptite image6">
-    <img src="galerie/image4.jpg" alt="ptite image7">
-    <img src="galerie/image2.jpg" alt="ptite image8">
+    <article id="entrees">
+      <img src="galerie/image6.jpg" alt="entrées">
+      <img src="galerie/image1.jpg" alt="entrées">
+      <img src="galerie/image3.jpg" alt="entrées">
+    </article>
+    <article id="plats">
+      <img src="galerie/image7.jpg" alt="plats">
+      <img src="galerie/image10.jpg" alt="plats">
+      <img src="galerie/image4.jpg" alt="plats">
+    </article>
+    <article id="desserts">
+      <img src="galerie/image8.jpg" alt="desserts">
+      <img src="galerie/image5.jpg" alt="desserts">
+      <img src="galerie/image9.jpg" alt="desserts">
+    </article>
   </section>
   <section id="apropos">
     <article>
@@ -91,7 +107,7 @@
     Sur les ateliers <br>
     <input type="submit" value="envoyer">
     </form>
-    
+
   </section>
   <footer>
     <h1 id="logo">La Graine Sans Gluten</h1>
@@ -106,4 +122,5 @@
 
   </footer>
 </body>
+<script src="script.js"></script>
 </html>
