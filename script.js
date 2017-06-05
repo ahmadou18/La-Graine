@@ -14,9 +14,11 @@ function scroll() {
     document.getElementById('logo').style.fontSize = "36px";
     if (window.scrollY > document.getElementById('contact').offsetTop) {
       document.getElementById('navbar').style.position = "static";
+      document.getElementById('navbar').style.flexDirection = "column";
     }
     else {
       document.getElementById('navbar').style.position = "fixed";
+      document.getElementById('navbar').style.flexDirection = "row";
     }
   }
   else {

@@ -68,8 +68,7 @@ nav {
     nav ul li:hover::after {
       transform: scaleX(1); }
   nav div {
-    margin-left: auto;
-    margin-right: 6px;
+    padding-right: 6px;
     font-size: 1.5em; }
     nav div i {
       color: #9B1700;
@@ -322,17 +321,26 @@ section #about {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-start; }
     #contact form fieldset {
       margin: 15px 0px;
       border: none;
       width: 100%; }
+    #contact form input[type='text'] {
+      width: 100%;
+      border-radius: 5px;
+      margin: 2px 0px;
+      text-align: center;
+      border: 1px solid black;
+      background: none;
+      padding: 5px;
+      font-family: 'Roboto'; }
     #contact form textarea {
       margin: 15px 0px;
       width: 100%;
       flex: 1;
       border-radius: 5px;
-      border: 1px solid #9B1700;
+      border: 1px solid black;
       background: none;
       padding: 5px;
       font-family: 'Roboto'; }
@@ -351,6 +359,7 @@ footer {
   height: 25%;
   color: grey; }
   footer p {
+    margin-top: 25px;
     width: 100%;
     text-align: center;
     font-size: 0.8em; }
