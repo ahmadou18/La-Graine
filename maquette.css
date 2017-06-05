@@ -114,42 +114,87 @@ header {
     text-shadow: 1px 2px black; }
 
 /* HISTOIRE */
-#histoire {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  background-image: url(galerie/image3.jpg);
-  background-position: center;
-  background-size: cover;
-  text-align: justify; }
-
-.hdetail {
-  width: 50%;
-  height: 100%;
-  margin-left: auto;
+#lagraine{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  background: #fafafa; }
+  height: 150%;
+}
 
-.hdetail h1 {
-  color: #9B1700;
-  font-size: 40px;
-  text-transform: capitalize; }
+#lagraine h2{
+  font-family: 'Roboto', sans-serif;
+}
 
-.hdetail p {
-  font-family: 'Roboto',sans-serif;
-  font-size: 16px;
+#lagraine h1{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.article{
   width: 90%;
-  color: grey; }
+  height: 40vh;
+  margin: 30px 0 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
 
-.himage {
-  background: rgba(0, 0, 0, 0.2);
-  width: 50%;
-  height: 100%; }
+.intro{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
 
+.fadeInRight{
+  opacity: 1;
+  animation-duration: 1s;
+}
+
+.plat{
+  width: 25%;
+  height: 35vh;
+  background-color: blue;
+  border-radius: 3px;
+}
+
+.article p{
+  font-size: 14px;
+  width: 80%;
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: gray;
+  text-align: justify;
+}
+
+
+.article2{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.plat1{
+  background-image: url(galerie/image5.jpg);
+  background-size: cover;
+}
+
+.plat2{
+  background-image: url(galerie/image6.jpg);
+  background-size: cover;
+}
+
+.plat3{
+  background-image: url(galerie/index.jpg);
+  background-size: cover;
+
+}
 /* GALERIE */
 #galerie {
   overflow: visible;
