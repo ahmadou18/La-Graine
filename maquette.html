@@ -1,83 +1,100 @@
 <!doctype html>
-<html>
+<html ng-app="">
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Graine Sans Gluten</title>
   <link rel="stylesheet" type="text/css" href="maquette.css">
+  <link rel="stylesheet" type ="text/css" href="animate.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://use.fontawesome.com/acd6178220.js"></script>
 </head>
 <body>
-
-  <nav>
-    <ul id="navbar">
-      <li onclick="scrollto('accueil')">Accueil</li>
-      <li onclick="scrollto('histoire')">Le Grain</li>
-      <li onclick="scrollto('galerie')">Les Plats</li>
-      <li onclick="scrollto('apropos')">Le Projet</li>
-      <li onclick="scrollto('crowdfunding')">Nous Soutenir</li>
-      <li onclick="scrollto('contact')">Contact</li>
-    </ul>
-    <div>
-      <i class="fa fa-facebook-official" aria-hidden="true"></i></li>
-      <i class="fa fa-instagram" aria-hidden="true"></i>
-    </div>
-  </nav>
-
   <header id="accueil">
-    <img src="galerie/logoplaceholder.png">
-    <h1 id="logo">La Graine Sans Gluten</h1>
+    <h1 id="picto">S</h1>
+    <h1 id="logo" onclick="scrollto('accueil')">La Graine Sans Gluten</h1>
     <h3>La Graine Sous Toutes Ses Formes</h3>
   </header>
 
   <section id="histoire">
-    <article>
+    <article class="hdetail">
       <h1>Il était une fois... le grain.</h1>
       <p>
-        Ce grain s'appelle blé, orge, seigle, épeautre, kamut ou avoine.
-        Ces grains sont proscrits pour les personnes qui sont atteints de la maladie du cœliaque (intolérance au gluten) ou sensibles. Le gluten est un composé d'amidon et de protéines qui se trouve dans certains grains, comme les différentes espèces de blé.
-        <br>
-        Environ 1 % de la population serait affectée par la maladie cœliaque.
-        <br>
-        La maladie cœliaque (intolérance au gluten)
-        <br>
-        La maladie cœliaque est une maladie auto-immune dans laquelle le système immunitaire attaque la muqueuse de l'intestin grêle après l'ingestion de gluten, chez une personne génétiquement sensible.
-        <br>
-        La sensibilité au gluten non cœliaque (SGNC)
-        <br>
-        Dans la sensibilité au gluten non cœliaque (SGNC), des personnes qui ne présentent pas les marqueurs sanguins, tissulaires, et génétiques de la maladie cœliaque ont des symptômes qui apparaissent peu de temps après l’ingestion de gluten et qui disparaissent suite au retrait du gluten de l’alimentation.
+      Ce grain s'appelle blé, orge, seigle, épeautre, kamut ou avoine.
+      Ces grains sont proscrits pour les personnes qui sont atteints de la maladie du cœliaque (intolérance au gluten) ou sensibles. Le gluten est un composé d'amidon et de protéines qui se trouve dans certains grains, comme les différentes espèces de blé.
+      <br>
+      <br>
+      Environ 1 % de la population serait affectée par la maladie cœliaque.
+      <br>
+      <br>
+      <strong>La maladie cœliaque (intolérance au gluten)</strong>
+      <br>
+      <br>
+      La maladie cœliaque est une maladie auto-immune dans laquelle le système immunitaire attaque la muqueuse de l'intestin grêle après l'ingestion de gluten, chez une personne génétiquement sensible.
+      <br>
+      <br>
+      <strong>La sensibilité au gluten non cœliaque (SGNC)</strong>
+      <br>
+      <br>
+      Dans la sensibilité au gluten non cœliaque (SGNC), des personnes qui ne présentent pas les marqueurs sanguins, tissulaires, et génétiques de la maladie cœliaque ont des symptômes qui apparaissent peu de temps après l’ingestion de gluten et qui disparaissent suite au retrait du gluten de l’alimentation.
       </p>
     </article>
+    <figure class="himage">
+
+    </figure>
   </section>
   <section id="galerie">
-    <article id="entrees">
-      <img src="galerie/image6.jpg" alt="entrées">
-      <img src="galerie/image1.jpg" alt="entrées">
-      <img src="galerie/image3.jpg" alt="entrées">
-    </article>
-    <article id="plats">
-      <img src="galerie/image7.jpg" alt="plats">
-      <img src="galerie/image10.jpg" alt="plats">
-      <img src="galerie/image4.jpg" alt="plats">
-    </article>
-    <article id="desserts">
-      <img src="galerie/image8.jpg" alt="desserts">
-      <img src="galerie/image5.jpg" alt="desserts">
-      <img src="galerie/image9.jpg" alt="desserts">
-    </article>
+    <div>
+      <article id="entrees" ng-click="entrees=!entrees">
+        <img src="galerie/image6.jpg" alt="entrées">
+        <img src="galerie/image1.jpg" alt="entrées">
+        <img src="galerie/image3.jpg" alt="entrées">
+      </article>
+      <article class="menu" ng-show="entrees">
+        <h1>Entrées</h1>
+        <p>À base de</p>
+      </article>
+    </div>
+    <div>
+      <article id="plats" ng-click="plats=!plats">
+        <img src="galerie/image7.jpg" alt="plats">
+        <img src="galerie/image10.jpg" alt="plats">
+        <img src="galerie/image4.jpg" alt="plats">
+      </article>
+      <article class="menu" ng-show="plats">
+        <h1>Plats</h1>
+        <p>À base de</p>
+      </article>
+    </div>
+    <div>
+      <article id="desserts" ng-click="desserts=!desserts">
+        <img src="galerie/image8.jpg" alt="desserts">
+        <img src="galerie/image5.jpg" alt="desserts">
+        <img src="galerie/image9.jpg" alt="desserts">
+      </article>
+      <article class="menu" ng-show="desserts">
+        <h1>Desserts</h1>
+        <p>À base de</p>
+      </article>
+    </div>
   </section>
   <section id="apropos">
-    <article>
-      <h1>À Propos</h1>
-      <p>
-        La Graine Sans Gluten est un concept d'une cuisine qui permet aux personnes intolérantes et sensibles au gluten de se faire plaisir sans frustration !
-        <br>
-        Les plats sont réalisés sur place avec des produits frais, locaux et faits maison. C'est une cuisine pleine de saveurs qui vous fera voyager à travers les pays de l’Afrique du Nord, en passant par l’Afrique de l'Ouest avant de revenir en France .
-        <br>
-        Aucun ingrédient à base de gluten est utilisé, une proscription totale!
-      </p>
+    <article class="left" >
+      <div class="ajust">
+        <h1>A Propos</h1>
+        <p>
+          La Graine Sans Gluten est un concept d'une cuisine qui permet aux personnes intolérantes et sensibles au gluten de se faire plaisir sans frustration !
+          <br>
+          Les plats sont réalisés sur place avec des produits frais, locaux et faits maison. C'est une cuisine pleine de saveurs qui vous fera voyager à travers les pays de l’Afrique du Nord, en passant par l’Afrique de l'Ouest avant de revenir en France .
+          <br>
+          Aucun ingrédient à base de gluten est utilisé, une proscription totale!
+        </p>
+      </div>
     </article>
+    <figure  class="right">
+
+    </figure>
   </section>
   <section id="crowdfunding">
     <article>
@@ -86,7 +103,7 @@
     </article>
   </section>
   <section id="contact">
-    <form action="mailto:"><h1>Contact</h1>
+    <form action="mailto:">
     <fieldset>
       <input type="radio" name="gender" value="male" checked>M.
       <input type="radio" name="gender" value="female"> Mme
@@ -97,30 +114,46 @@
       <input type="text" name="firstname" placeholder="prénom"><br>
       <input type="mail" name="mail" placeholder="mail">
     </fieldset>
+    <textarea name="message"></textarea>
     <fieldset>
-      <textarea name="message">
-      </textarea>
+      Je souhaite recevoir des informations :
+      <br>
+      <input type="checkbox" name="check1" value="Projet"> Sur le projet
+      <br>
+      <input type="checkbox" name="check2" value="Atelier">
+      Sur les ateliers
     </fieldset>
-    Je souhaite recevoir des informations : <br>
-    <input type="checkbox" name="vehicle1" value="Bike"> Sur le projet<br>
-    <input type="checkbox" name="vehicle2" value="Car">
-    Sur les ateliers <br>
-    <input type="submit" value="envoyer">
+    <input id="submit" type="submit" value="envoyer">
     </form>
-
+    <div>
+      <img src="galerie/image1.jpg">
+    </div>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=223830734341925" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
   </section>
-  <footer>
-    <h1 id="logo">La Graine Sans Gluten</h1>
 
-    <ul id="navbar">
-      <a href=""><li>Accueil</li></a>
-      <a href="#apropos"><li>À Propos</li></a>
-      <a href="#galerie"><li>Galerie</li></a>
-      <a href="#crowdfunding"><li>Crowdfunding</li></a>
-      <a href="#contact"><li>Contact</li></a>
-    </ul>
-
+  <footer id="footer">
+    <nav id="navbar">
+      <ul>
+        <li onclick="scrollto('histoire')">Le Grain</li>
+        <li onclick="scrollto('galerie')">Les Plats</li>
+        <li onclick="scrollto('apropos')">Le Projet</li>
+        <li onclick="scrollto('crowdfunding')">Nous Soutenir</li>
+        <li onclick="scrollto('contact')">Contact</li>
+      </ul>
+      <div>
+        <i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </div>
+    </nav>
+    <p>Concept : Wahiba Mechrouki
+      <br>
+      Réalisé par : Ahmadou Gueye, Paul Roche
+    </p>
   </footer>
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </html>

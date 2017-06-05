@@ -8,12 +8,14 @@
   font-family: 'Nickainley';
   src: url("font/Nickainley-Normal.otf"); }
 @font-face {
-  font-family: 'Magnolia';
-  src: url("font/Magnolia Script.otf"); }
+  font-family: 'Multicolore';
+  src: url("font/Multicolore.otf"); }
 html, header, section, footer {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 body {
   height: 100%;
@@ -34,9 +36,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #9B1700; }
+  background: rgba(250, 250, 250, 0.9); }
   nav ul {
-    color: white;
+    color: #9B1700;
     list-style: none;
     padding: 8px;
     flex: 1;
@@ -47,7 +49,7 @@ nav {
       padding: 8px;
       margin: 0px 25px;
       font-family: 'Roboto', sans-serif;
-      color: white;
+      color: #9B1700;
       font-size: 1em;
       text-decoration: none;
       text-align: center;
@@ -58,7 +60,7 @@ nav {
       cursor: pointer;
       width: 100%;
       height: 2px;
-      background-color: white;
+      background-color: #9B1700;
       top: 0;
       left: 0;
       transition: all 0.5s ease-in-out;
@@ -70,7 +72,7 @@ nav {
     margin-right: 6px;
     font-size: 1.5em; }
     nav div i {
-      color: white;
+      color: #9B1700;
       padding: 6px;
       cursor: pointer; }
 
@@ -79,38 +81,114 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background: url("galerie/image1.jpg") center fixed; }
   header img {
     height: 25%; }
-  header h1 {
-    font-size: 125px;
+  header #picto {
+    width: 150px;
+    margin: 50px;
+    background: #fafafa;
+    border-radius: 50%;
+    vertical-align: middle;
+    font-size: 120px;
+    border: 10px solid #fafafa;
+    color: #9B1700; }
+  header #logo {
+    z-index: 1;
+    width: 100%;
+    background: rgba(250, 250, 250, 0.9);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 72px;
     font-family: 'Nickainley';
-    color: white;
-    cursor: default;
-    text-shadow: 2px 2px #80D0D0; }
+    color: #9B1700;
+    cursor: pointer;
+    text-shadow: 0px 6px white;
+    transition: font-size 0.3s; }
   header h3 {
-    font-family: "Magnolia";
-    font-size: 50px;
+    font-family: "Multicolore";
+    font-size: 25px;
     font-weight: lighter;
-    color: #80D0D0;
-    text-shadow: 1px 1px white; }
+    color: white;
+    text-shadow: 1px 2px black; }
 
 /* HISTOIRE */
+#histoire {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-image: url(galerie/image3.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: justify; }
+
+.hdetail {
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #fafafa; }
+
+.hdetail h1 {
+  color: #9B1700;
+  font-size: 40px;
+  text-transform: capitalize; }
+
+.hdetail p {
+  font-family: 'Roboto',sans-serif;
+  font-size: 16px;
+  width: 90%;
+  color: grey; }
+
+.himage {
+  background: rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: 100%; }
+
 /* GALERIE */
 #galerie {
-  max-width: 100%; }
-  #galerie article {
-    width: 33.33333%;
-    position: relative;
-    cursor: pointer; }
-    #galerie article img {
-      height: 100%;
+  overflow: visible;
+  height: 100%;
+  margin-top: 100px;
+  min-height: 100%;
+  max-width: 100%;
+  background: white;
+  align-items: center;
+  justify-content: space-around; }
+  #galerie div {
+    height: 100%;
+    min-height: 100%;
+    width: 25%;
+    position: relative; }
+    #galerie div article {
       width: 100%;
-      object-fit: cover;
-      display: none; }
+      height: 75%; }
+      #galerie div article img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: none;
+        border-radius: 5px;
+        cursor: pointer; }
+    #galerie div .menu {
+      padding: 50px 0px;
+      height: auto;
+      text-align: center; }
+      #galerie div .menu h1 {
+        font-family: "Multicolore";
+        color: #9B1700; }
+      #galerie div .menu p {
+        color: grey; }
   #galerie article:hover {
     opacity: 0.75;
     transition-duration: 0.3s; }
+  #galerie .menu:hover {
+    opacity: 1; }
   #galerie article::after {
     position: absolute;
     left: 0;
@@ -119,8 +197,8 @@ header {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 3em;
+    font-family: "Multicolore";
     color: white;
     opacity: 0; }
   #galerie #entrees::after {
@@ -134,50 +212,73 @@ header {
     transition-duration: 0.5s; }
 
 /* A PROPOS */
-/* CROWDFUNDING */
-/* CONTACT */
-/* FOOTER */
-#apropos {
-  z-index: 2;
-  background: url("galerie/image4.jpg") center fixed; }
-
-#apropos article {
+section #about {
+  overflow-x: hidden;
   display: flex;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
-  width: 100%;
+  justify-content: space-around;
+  align-items: center; }
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   height: 100%;
   text-align: justify;
+  justify-content: center;
   align-items: center;
-  justify-content: center; }
+  opacity: 0;
+  transition: 0.3s; }
 
-#apropos h1 {
-  position: absolute;
-  color: white;
-  top: 50px;
-  right: 50px;
-  font-size: 100px; }
+.slideInDown {
+  opacity: 1;
+  animation-duration: 1s; }
 
-#apropos p {
-  margin-left: 50%;
-  margin-right: 50px;
-  color: white;
-  ffont-family: 'Roboto', sans-serif; }
+.ajust {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center; }
 
+.ajust p {
+  color: grey;
+  font-family: 'roboto',sans-serif;
+  font-size: 17px;
+  line-height: 30px; }
+
+.ajust h1 {
+  text-align: center;
+  color: #9B1700;
+  font-size: 60px; }
+
+.right {
+  width: 50%;
+  height: 100vh;
+  background-image: url(galerie/roberta-sorge-143084.jpg);
+  background-size: cover;
+  transition: 0.3s;
+  opacity: 0; }
+
+.fadeInRight {
+  opacity: 1;
+  animation-duration: 1s; }
+
+/* CROWDFUNDING */
 #crowdfunding {
-  justify-content: flex-start;
+  justify-content: flex-end;
   width: 100%;
-  background: url("galerie/image3.jpg") center fixed; }
+  background: url("galerie/histoire.jpg") center fixed; }
 
 #crowdfunding article {
   position: relative;
-  background-color: #80D0D0;
+  background-color: white;
   width: 50%;
   height: 100%;
-  left: 0; }
+  right: 0; }
 
 #crowdfunding h1 {
-  position: absolute;
-  color: white;
+  color: #9B1700;
   bottom: 50px;
   left: 25px;
   font-size: 90px; }
@@ -186,56 +287,72 @@ header {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 200px;
-  color: white;
+  color: grey;
   font-family: 'Roboto', sans-serif;
   text-align: justify; }
 
+/* CONTACT */
 #contact {
-  background: url("galerie/image1.jpg") center fixed;
-  justify-content: space-around; }
+  background: #fafafa;
+  justify-content: space-around;
+  align-items: center; }
+  #contact div {
+    position: relative;
+    width: 25%;
+    height: 75%; }
+    #contact div img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px; }
+  #contact div::after {
+    position: absolute;
+    content: "contact";
+    left: 0;
+    top: 0;
+    margin-top: 50%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-family: "Multicolore";
+    color: white; }
+  #contact form {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    #contact form fieldset {
+      margin: 15px 0px;
+      border: none;
+      width: 100%; }
+    #contact form textarea {
+      margin: 15px 0px;
+      width: 100%;
+      flex: 1;
+      border-radius: 5px;
+      border: 1px solid #9B1700;
+      background: none;
+      padding: 5px;
+      font-family: 'Roboto'; }
+    #contact form #submit {
+      width: 100%;
+      background: #9B1700;
+      color: #fafafa;
+      text-transform: capitalize;
+      padding: 10px;
+      border-radius: 5px;
+      border: none; }
 
+/* FOOTER */
 footer {
   position: relative;
-  z-index: 3;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url("galerie/home.jpg") center fixed; }
-
-footer ul {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  list-style: none; }
-
-footer li {
-  position: relative;
-  width: 100%;
-  margin-right: 100px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  text-decoration: none;
-  text-align: center; }
-
-footer li:hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  border-top: 5px solid #9B1700;
-  transition-duration: 0.3s; }
-
-ul a {
-  text-decoration: none; }
-
-footer h1 {
-  z-index: 1;
-  font-size: 125px;
-  font-family: 'Nickainley';
-  color: white;
-  cursor: default; }
+  height: 25%;
+  color: grey; }
+  footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em; }
 
 /*# sourceMappingURL=maquette.css.map */
