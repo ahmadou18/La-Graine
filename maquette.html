@@ -2,7 +2,7 @@
 <html ng-app="">
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Graine Sans Gluten</title>
   <link rel="stylesheet" type="text/css" href="maquette.css">
   <link rel="stylesheet" type ="text/css" href="animate.css">
@@ -12,37 +12,38 @@
 </head>
 <body>
   <header id="accueil">
-    <h1 id="picto">S</h1>
+    <h1 id="picto">G</h1>
     <h1 id="logo" onclick="scrollto('accueil')">La Graine Sans Gluten</h1>
     <h3>La Graine Sous Toutes Ses Formes</h3>
   </header>
 
-  <section id="histoire">
-    <article class="hdetail">
-      <h1>Il était une fois... le grain.</h1>
-      <p>
-      Ce grain s'appelle blé, orge, seigle, épeautre, kamut ou avoine.
-      Ces grains sont proscrits pour les personnes qui sont atteints de la maladie du cœliaque (intolérance au gluten) ou sensibles. Le gluten est un composé d'amidon et de protéines qui se trouve dans certains grains, comme les différentes espèces de blé.
-      <br>
-      <br>
-      Environ 1 % de la population serait affectée par la maladie cœliaque.
-      <br>
-      <br>
-      <strong>La maladie cœliaque (intolérance au gluten)</strong>
-      <br>
-      <br>
-      La maladie cœliaque est une maladie auto-immune dans laquelle le système immunitaire attaque la muqueuse de l'intestin grêle après l'ingestion de gluten, chez une personne génétiquement sensible.
-      <br>
-      <br>
-      <strong>La sensibilité au gluten non cœliaque (SGNC)</strong>
-      <br>
-      <br>
-      Dans la sensibilité au gluten non cœliaque (SGNC), des personnes qui ne présentent pas les marqueurs sanguins, tissulaires, et génétiques de la maladie cœliaque ont des symptômes qui apparaissent peu de temps après l’ingestion de gluten et qui disparaissent suite au retrait du gluten de l’alimentation.
-      </p>
-    </article>
-    <figure class="himage">
+  <section id="lagraine">
+    <article class="article article1">
+      <div class="plat plat1">
+      </div>
+      <div class="intro fadeInRight">
+        <h1>Il était une fois... le grain.</h1>
+        <p>  Ce grain s'appelle blé, orge, seigle, épeautre, kamut ou avoine. Ces grains sont proscrits pour les personnes qui sont atteints de la maladie du cœliaque (intolérance au gluten) ou sensibles. Le gluten est un composé d'amidon et de protéines qui se trouve dans certains grains, comme les différentes espèces de blé. <br><br>Environ 1% de la population serait affecté par la maladie cœliaque.</p>
+      </div>
 
-    </figure>
+    </article>
+
+    <article class="article article2">
+      <div class="plat plat2">
+      </div>
+      <div class="intro fadeInRight">
+        <h2>La maladie cœliaque (intolérance au gluten)</h2>
+        <p>La maladie cœliaque est une maladie auto-immune dans laquelle le système immunitaire attaque la muqueuse de l'intestin grêle après l'ingestion de gluten, chez une personne génétiquement sensible.</p>
+      </div>
+    </article>
+    <article class="article article3">
+      <div class="plat plat3">
+      </div>
+      <div class="intro fadeInRight">
+        <h2>La sensibilité au gluten non cœliaque (SGNC)</h2>
+        <p>Dans la sensibilité au gluten non cœliaque (SGNC), des personnes qui ne présentent pas les marqueurs sanguins, tissulaires, et génétiques de la maladie cœliaque ont des symptômes qui apparaissent peu de temps après l’ingestion de gluten et qui disparaissent suite au retrait du gluten de l’alimentation.</p>
+      </div>
+    </article>
   </section>
   <section id="galerie">
     <div>
@@ -97,6 +98,8 @@
     </figure>
   </section>
   <section id="crowdfunding">
+    <figure  class="left">
+    </figure>
     <article>
       <h1>Soutenir le projet</h1>
       <p>Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos ex isdem foveis cerneret emergentes, quae clam palamve agitabantur, occultis Constantium litteris edocebat inplorans subsidia, quorum metu tumor notissimus Caesaris exhalaret.</p>
@@ -104,26 +107,26 @@
   </section>
   <section id="contact">
     <form action="mailto:">
-    <fieldset>
-      <input type="radio" name="gender" value="male" checked>M.
-      <input type="radio" name="gender" value="female"> Mme
-      <input type="radio" name="gender" value="other"> Autre
-    </fieldset>
-    <fieldset>
-      <input type="text" name="name" placeholder="Nom"><br>
-      <input type="text" name="firstname" placeholder="Prénom"><br>
-      <input type="text" name="mail" placeholder="Mail">
-    </fieldset>
-    <textarea name="message"></textarea>
-    <fieldset>
-      Je souhaite recevoir des informations :
-      <br>
-      <input type="checkbox" name="check1" value="Projet"> Sur le projet
-      <br>
-      <input type="checkbox" name="check2" value="Atelier">
-      Sur les ateliers
-    </fieldset>
-    <input id="submit" type="submit" value="envoyer">
+      <fieldset>
+        <input type="radio" name="gender" value="male" checked>M.
+        <input type="radio" name="gender" value="female"> Mme
+        <input type="radio" name="gender" value="other"> Autre
+      </fieldset>
+      <fieldset>
+        <input type="text" name="name" placeholder="nom"><br>
+        <input type="text" name="firstname" placeholder="prénom"><br>
+        <input type="text" name="mail" placeholder="mail">
+      </fieldset>
+      <textarea name="message"></textarea>
+      <fieldset>
+        Je souhaite recevoir des informations :
+        <br>
+        <input type="checkbox" name="check1" value="Projet"> Sur le projet
+        <br>
+        <input type="checkbox" name="check2" value="Atelier">
+        Sur les ateliers
+      </fieldset>
+      <input id="submit" type="submit" value="envoyer">
     </form>
     <div>
       <img src="galerie/image1.jpg">
@@ -134,7 +137,7 @@
   <footer id="footer">
     <nav id="navbar">
       <ul>
-        <li onclick="scrollto('histoire')">Le Grain</li>
+        <li onclick="scrollto('lagraine')">Le Grain</li>
         <li onclick="scrollto('galerie')">Les Plats</li>
         <li onclick="scrollto('apropos')">Le Projet</li>
         <li onclick="scrollto('crowdfunding')">Nous Soutenir</li>
@@ -152,8 +155,8 @@
   </footer>
 </body>
 <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
 crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </html>

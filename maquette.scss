@@ -141,45 +141,93 @@ header {
 
 /* HISTOIRE */
 
-#histoire{
+#lagraine{
+  margin-top: 100px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150%;
+}
+
+#lagraine h1{
+  color: $paprika;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+#lagraine h2{
+  font-family: 'Multicolore', sans-serif;
+  color: $paprika;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.article{
+  width: 90%;
+  height: 40vh;
+  margin: 30px 0 30px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro{
+  width: 70%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(galerie/image3.jpg);
-  background-position: center;
-  background-size: cover;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.fadeInRight{
+  opacity: 1;
+  animation-duration: 1s;
+}
+
+.plat{
+  width: 25%;
+  height: 35vh;
+  border-radius: 5px;
+}
+
+.article p{
+  font-size: 17px;
+  line-height: 30px;
+  width: 80%;
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: grey;
   text-align: justify;
 }
 
-.hdetail{
-  width: 50%;
-  height: 100%;
-  margin-left: auto;
+
+.article2{
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background: rgba( 250, 250, 250, 1);
+  flex-direction: row-reverse;
 }
 
-.hdetail h1{
-  color: $paprika;
-  font-size: 40px;
-  text-transform: capitalize;
+
+.plat1{
+  background-image: url(galerie/image5.jpg);
+  background-size: cover;
 }
 
-.hdetail p{
-  font-family: 'Roboto',sans-serif;
-  font-size: 16px;
-  width: 90%;
-  color: grey;
+.plat2{
+  background-image: url(galerie/image6.jpg);
+  background-size: cover;
 }
 
-.himage {
-  background: rgba( 0, 0, 0, 0.2);
-  width: 50%;
-  height: 100%;
+.plat3{
+  background-image: url(galerie/index.jpg);
+  background-size: cover;
+
 }
 
 /* GALERIE */
@@ -318,7 +366,9 @@ section #about{
 }
 .right{
   width: 50%;
-  height: 100vh;
+  height: 75%;
+  border-radius: 5px;
+  align-self: center;
   background-image: url(galerie/roberta-sorge-143084.jpg);
   background-size: cover;
   transition: 0.3s;
@@ -333,33 +383,46 @@ section #about{
 /* CROWDFUNDING */
 
 #crowdfunding {
-  justify-content: flex-end;
-  width: 100%;
-  background: url("galerie/histoire.jpg") center fixed;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+figure.left {
+  width: 40%;
+  height: 75%;
+  border-radius: 5px;
+  align-self: center;
+  background-image: url(galerie/histoire.jpg);
+  background-size: cover;
 }
 
 #crowdfunding article {
-  position: relative;
   background-color: white;
+  margin-left: auto;
   width: 50%;
   height: 100%;
-  right: 0;
+  text-align: justify;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#crowdfunding h1 {
-  color: $paprika;
-  bottom: 50px;
-  left: 25px;
-  font-size: 90px;
+#crowdfunding {
+  h1{
+    color: $paprika;
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
 }
 
 #crowdfunding p {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 200px;
   color: grey;
-  font-family: 'Roboto', sans-serif;
-  text-align: justify;
+  font-family: 'roboto',sans-serif;
+  font-size: 17px;
+  line-height: 30px;
 }
 
 /* CONTACT */
